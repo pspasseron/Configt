@@ -1,0 +1,68 @@
+---
+title: "Configuración de Github"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Configuración
+
+En la consola de RStudio:
+
+```{r}
+install.packages(usethis) #instala el paquete usethis
+
+library(usethis)
+usethis::edit_git_config()
+```
+
+
+## Crear un token de acceso personal (PAT) en GitHub
+
+Para generar un token de acceso personal, use la función create_github_token() de usethis. Esto lo llevará a la página correspondiente en el sitio web de GitHub, donde le dará un nombre a su token y lo copiará
+
+```{r cars}
+library(usethis)
+usethis::create_github_token()
+
+```
+
+## Almacenar token de acceso personal para conectar RStudio y GitHub
+
+En la consola de RStudio:
+
+```{r pressure, echo=FALSE}
+
+
+install.packages("gitcreds")
+library(gitcreds)
+gitcreds::gitcreds_set()
+# Ante la pregunta: "Enter password or token"
+# introducir el token copiado en el paso anterior
+
+
+```
+
+Y guarda el token en .Renviron
+
+
+```{r}
+
+usethis::edit_r_environ()
+
+#  GITHUB_TOKEN="MI_TOKEN_xxxxxxxxxxxxxx"
+
+
+```
+
+
+Reinicia R y verifica la configuración con:
+
+
+```{r}
+usethis::git_sitrep()
+```
+
+

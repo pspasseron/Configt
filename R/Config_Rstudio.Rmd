@@ -66,3 +66,33 @@ usethis::git_sitrep()
 ```
 
 
+## Ahora vamos hacer un Fork (bifurcarlo)
+
+haga su propia copia del repositorio en GitHub. Las bifurcaciones están vinculadas y rastreables
+
+
+## Clone repo remoto
+
+## Crea un new project en Rstudio
+
+## Realice un cambio al repo en su PC
+
+## Edite el archivo
+
+## Commit los cambios localmente en git
+
+## Push los cambios a GitHub
+
+## Crear solicitud de extracción (pull request) en su repo
+
+## Agregar control remoto ascendente (upstream) de la rama fusionada
+
+Podemos verificar las URL de los controles remotos actualmente vinculados a nuestro repositorio local usando
+
+```{r}
+usethis::git_remotes()
+```
+
+
+
+

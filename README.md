@@ -33,3 +33,25 @@ Código en
 varias líneas
 ```
 
+# El Flujo de Trabajo en GitHub
+
+Receta: FORK + Upstream + Pull Request
+
+Forkear un Repo
+Clonar el Repo a nuestro PC
+
+Crear una rama Upstream
+
+  git remote add upstream [el url oficial que clonamos]
+  git remote -v (para ver las nuevas v.)
+  git fetch upstream
+  git rebase upstream/main
+  git push origin main --force
+
+Hacer los cambios 
+
+Push de los cambios
+
+Pull request    
+
+Hacer Pull Request

@@ -87,11 +87,47 @@ haga su propia copia del repositorio en GitHub. Las bifurcaciones están vincula
 
 ## Agregar control remoto ascendente (upstream) de la rama fusionada
 
+El Flujo de Trabajo en GitHub
+Receta: FORK + Upstream + Pull Request
+
+Forkear un Repo
+Clonar el Repo a nuestro PC
+
+Crear una rama Upstream
+
+  git remote add upstream [el url oficial]
+  git remote -v (para ver las nuevas v.)
+  git fetch upstream
+  git rebase upstream/main
+  git push origin main --force
+
+Hacer los cambios y Push los cambios
+
+Hacer Pull Request
+
+
+
 Podemos verificar las URL de los controles remotos actualmente vinculados a nuestro repositorio local usando
 
 ```{r}
 usethis::git_remotes()
 ```
+
+We can then use usethis::use_git_remote() to set the upstream repository:
+
+
+```{r}
+usethis::use_git_remote(
+    name = "upstream", 
+    url = "https://github.com/1506mat/Configt.git")
+```
+
+# Sincronizamos con upstream
+
+```{r}
+usethis::pr_merge_main()
+```
+
 
 
 
